@@ -1,0 +1,38 @@
+{
+  "theme": "dark",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "${ANTHROPIC_API_KEY}",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro[1m]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read", "Read(*)", "Search", "Search(*)",
+      "Bash(ls *)", "Bash(find *)", "Bash(echo *)", "Bash(cat *)", "Bash(tail *)",
+      "Bash(git *)",
+      "Bash(grep *)",
+      "Bash(npm *)",
+      "Bash(pip *)", "Bash(pip3 *)",
+      "Bash(python *)", "Bash(python3 *)",
+      "Bash(pytest *)",
+      "Bash(cp *)", "Bash(mv *)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)", "Bash(rm -rf ~)", "Bash(rm -rf .git)",
+      "Bash(reboot)", "Bash(shutdown *)", "Bash(format *)",
+      "Bash(mkfs *)", "Bash(dd *)",
+      "Read(~/.ssh/*)", "Read(~/.aws/*)", "Read(~/.config/*)",
+      "Read(~/.bashrc)", "Read(~/.zshrc)",
+      "Read(./.env*)", "Bash(cat .env*)",
+      "Read(./instance/config.py)", "Read(./secrets.json)", "Read(./*.db)", "Read(./*.sqlite*)", 
+      "Read(./dump.rdb)", "Read(./*.pem)", "Read(./*.key)", "Read(./docker-compose.override.yml)",
+      "Read(./venv/*)", "Read(./.venv/*)", "Read(./__pycache__/*)", "Read(./.pytest_cache/*)", 
+      "Read(./*.egg-info/*)", "Read(./build/*)",
+      "Write(settings.json)",
+      "Write(.gitlab-ci.yml)"
+    ]
+  }
+}
